@@ -1,0 +1,28 @@
+From e20360f2e96633b46e77881fd612b38054c6b157 Mon Sep 17 00:00:00 2001
+From: DanDdl <dangladste@gmail.com>
+Date: Sun, 18 Jun 2023 16:29:16 +0300
+Subject: [PATCH] patch
+
+---
+ app-example.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/app-example.c b/app-example.c
+index 54343c3..5a8ca87 100644
+--- a/app-example.c
++++ b/app-example.c
+@@ -3,5 +3,11 @@
+ 
+ int main(int argc, char* argv[]) {
+     printf("Hello from example app\n");
++
++#ifdef FLAG_PATCH
++    printf("Patch flag defined\n");
++#else
++    printf("Patch flag not defined\n");
++#endif
+     return 0;
+ }
+-- 
+2.34.1
+
